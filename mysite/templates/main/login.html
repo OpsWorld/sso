@@ -97,6 +97,11 @@ function check(form) {
     }
     return checkSubmit;
 }
+$(document).ready(function(){
+    $("#captcha").click(function(){
+        document.getElementById("captcha").src="/sso/captcha.html?t=" + Math.random();
+    });
+ });
 </script>
   </body>
 </html>
