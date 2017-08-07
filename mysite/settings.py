@@ -37,8 +37,13 @@ SHOW_CAPTCHA = True
 #忘记密码重置和修改密码URL
 PASSWD_URL = 'http://ssp.ops.hhr.com/index.php?action=sendtoken'
 LOGIN_URL = 'http://sso.ops.hhr.com/sso/login/'
+LOGOUT_URL = 'http://sso.ops.huixiaobao.cc/sso/logout/'
 GET_USER_URL = 'http://sso.ops.hhr.com/sso/get_user/'
 COOKIE_EXPIRES = 3600
+#SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+SESSION_COOKIE_AGE = 86400  # 设置session有效期为一天,默认两周
+SESSION_COOKIE_DOMAIN = ".huixiaobao.cc"
+#SESSION_COOKIE_NAME = "hhr"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
@@ -252,11 +257,6 @@ LOGGING = {
 }
 CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
 
-#session config
-#SESSION_ENGINE = "django.contrib.sessions.backends.cache"
-SESSION_COOKIE_AGE = 86400  # 设置session有效期为一天,默认两周
-#SESSION_COOKIE_DOMAIN = ".xxx.com"
-#SESSION_COOKIE_NAME = "xxx"
 #CACHES = {
 #    'default': {
 #        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
