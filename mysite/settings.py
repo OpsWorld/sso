@@ -19,7 +19,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 #系统API地址
-SYS_API = 'http://yun.ops.hhr.com'
+SYS_API = 'http://yun.ops.huixiaobao.cc'
 
 #salt_deploy
 SCRIPT_DIR = '/srv/salt'
@@ -35,10 +35,10 @@ LOG_DIR = os.path.join(BASE_DIR, 'logs')
 #是否显示验证码
 SHOW_CAPTCHA = True
 #忘记密码重置和修改密码URL
-PASSWD_URL = 'http://ssp.ops.hhr.com/index.php?action=sendtoken'
-LOGIN_URL = 'http://sso.ops.hhr.com/sso/login/'
+PASSWD_URL = 'http://ssp.ops.huixiaobao.cc/index.php?action=sendtoken'
+LOGIN_URL = 'http://sso.ops.huixiaobao.cc/sso/login/'
 LOGOUT_URL = 'http://sso.ops.huixiaobao.cc/sso/logout/'
-GET_USER_URL = 'http://sso.ops.hhr.com/sso/get_user/'
+GET_USER_URL = 'http://sso.ops.huixiaobao.cc/sso/get_user/'
 COOKIE_EXPIRES = 3600
 #SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_COOKIE_AGE = 86400  # 设置session有效期为一天,默认两周
