@@ -90,7 +90,7 @@ def login(request):
         if show_captcha:
             if not Captcha(request).check(code): 
                 result = '验证码错误'
-                return render_to_response('main/login.html',locals())
+                return render_to_response('sso/login.html',locals())
         user = auth.authenticate(username=username,password=password)
         if user is not None:
             auth.login(request,user)
@@ -104,7 +104,7 @@ def login(request):
             return response
         else:
             result = '用户名或密码错误'
-    return render_to_response('main/login.html',locals())
+    return render_to_response('sso/login.html',locals())
 
 def get_user(request):
     expiration = settings.COOKIE_EXPIRES
